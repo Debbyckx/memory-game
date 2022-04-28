@@ -14,5 +14,6 @@ button {
 }
 
 button:hover {
-  background: rgb(224, 57, 85);
+  background: rgb(153, 0, 255);
+  color: #fff;
 }
