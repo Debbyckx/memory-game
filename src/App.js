@@ -2,12 +2,12 @@ import { useState } from 'react'
 import './App.css'
 
 const cardImages = [
-  { "src": "/img/earth.JPG"},
-  { "src": "/img/lightning.JPG"},
-  { "src": "/img/air.JPG"},
-  { "src": "/img/water.JPG"},
-  { "src": "/img/fire.JPG"},
-  { "src": "/img/cover.JPG"}
+  { "src": "/img/1.jpg"},
+  { "src": "/img/2.jpg"},
+  { "src": "/img/3.jpg"},
+  { "src": "/img/4.jpg"},
+  { "src": "/img/5.jpg"},
+  { "src": "/img/6.jpg"}
 ]
 
 function App() {
@@ -30,6 +30,17 @@ const [turns, setTurns] = useState(0)
     <div className="App">
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New game</button>
+
+      <div className="card-grid">
+        {cards.map(card => (
+          <div className="card" key={card.id}>
+            <div>
+              <img className="front" src={card.src} alt="card front" />
+              <img className="back" src="/img/cover.jpg" alt="card back" />
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
